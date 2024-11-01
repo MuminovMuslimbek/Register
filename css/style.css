@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: rgb(0, 192, 255);
+    background: linear-gradient(28deg, rgba(0, 192, 255, 1) 29%, rgba(9, 9, 121, 1) 72%, rgba(36, 0, 31, 1) 100%);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #B4B6B8;
+    font-size: 14px;
+    font-family: "JetBrains Mono";
+    padding: 60px 0;
+}
+
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #2B2B2B;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #4e4d4f;
+    border-radius: 50px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #3B3B3B;
+    cursor: grab;
+}
+
+ ::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+.card-h1 {
+    font-size: 9px;
+    background: #000;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 87%;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.form {
+    background-color: #fff;
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.name {
+    width: 100%;
+    margin-left: -10px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+select>option {
+    border: 1px solid #000;
+}
+
+label {
+    color: #282323e3;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #E7E7E7;
+}
+
+.radio {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+}
+
+.radio h2 {
+    text-align: center;
+    font-size: 14px;
+    color: #484545;
+}
+
+.radio button {
+    width: 120px;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    background: #200ae6;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    width: 80%;
+}
+
+.radio button:active {
+    transform: scale(0.95);
+}
+
+.yes-no {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.yes-no>input,
+label {
+    cursor: pointer;
+}
+
+#loadingWrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    user-select: none;
+}
+
+#loading {
+    user-select: none;
+    width: 120px;
+}
+
+#block {
+    display: none;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: #373636;
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_card {
+    background-color: #fff;
+    color: #2B2B2B;
+    width: 500px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.modal_card>button {
+    padding: 5px 18px;
+    background-color: rgb(0, 115, 255);
+    border: 1px solid #200ae6;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+.modal_card>button:active {
+    transform: scale(0.90);
+}
+
+.modal_card>button:hover {
+    color: #ffffffad;
+}
+
+#tastiqlandi {
+    width: 100vw;
+    height: 100vh;
+    background-color: #373636;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tastiqlandi>h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    animation-name: FontSize;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes FontSize {
+    0% {
+        font-size: 25px;
+    }
+    10% {
+        font-size: 30px;
+    }
+    20% {
+        font-size: 35px;
+    }
+    30% {
+        font-size: 40px;
+    }
+    40% {
+        font-size: 45px;
+    }
+    50% {
+        font-size: 50px;
+    }
+    60% {
+        font-size: 45px;
+    }
+    70% {
+        font-size: 40px;
+    }
+    80% {
+        font-size: 35px;
+    }
+    90% {
+        font-size: 30px;
+    }
+    100% {
+        font-size: 25px;
+    }
+}

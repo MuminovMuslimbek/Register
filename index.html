@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="images/user.webp">
+    <title>Register</title>
+</head>
+
+<body>
+    <div id="loadingWrapper">
+        <img id="loading">
+    </div>
+    <div class="modal">
+        <div class="modal_card">
+            <h4>Agar siz bu saytga kirmoqchi bo'sangiz, bot emasligingizni tekshirishimiz uchun <span style="color: green; text-decoration: underline;">OK</span> tugmasini bosing!</h4>
+            <button id="ModalBtn">OK</button>
+        </div>
+    </div>
+    <div id="tastiqlandi">
+        <h1>tastiqlandi</h1>
+    </div>
+    <div class="card">
+        <div class="card-h1">
+            <h1>event regestration form</h1>
+        </div>
+        <div class="card-form">
+            <form class="form">
+                <div class="name">
+                    <label for="name">Name:</label>
+                    <input style="width: 100%;" id="firstName" type="text" name="name" required placeholder="first name..">
+                    <p>and</p>
+                    <input style="width: 100%;" id="lastName" type="text" name="name" required placeholder="lastname..">
+                </div>
+                <div class="name">
+                    <label for="email">Email:</label>
+                    <input id="email" style="width: 100%;" type="email" name="email" required placeholder="example@email.com..">
+                </div>
+                <div class="name">
+                    <label for="password">Password:</label>
+                    <input id="password" style="width: 100%;" type="password" name="password" required>
+                </div>
+                <div class="name">
+                    <label for="phone">Phone:</label>
+                    <input id="phoneNumber" style="width: 100%;" type="tel" name="phone number" required placeholder="phone number..">
+                </div>
+                <div class="name">
+                    <label for="company">Company:</label>
+                    <input id="company" style="width: 100%;" type="text" name="company name" required>
+                </div>
+                <div class="name">
+                    <label for="subjects">Subject:</label>
+                    <select id="subjects" class="name" name="subject">
+                        <option>Chouse Option</option>
+                        <option value="Algebra">Algebra</option>
+                        <option value="Geometry">Geometry</option>
+                        <option value="Calculus">Calculus</option>
+                        <option value="Statistics and Probability
+                        ">Statistics and Probability
+                        </option>
+                        <option value="Biology">Biology</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Ecology">Ecology</option>
+                        <option value="History">History</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Information Technology">Information Technology</option>
+                    </select>
+                </div>
+
+                <div class="name">
+                    <label for="image">Image:</label>
+                    <input id="imageUrl" class="urlImg" style="width: 100%;" type="url" placeholder="URL">
+                    <p>or</p>
+                    <input id="imageFile" class="urlImg" style="width: 100%;" type="file">
+                </div>
+                <div class="radio">
+                    <h2>Are you an existing customer?</h2>
+                    <div class="yes-no">
+                        <label for="Yes">Yes</label>
+                        <input id="Yes" type="radio" name="Answer" required value="Yes">
+                        <label for="No">No</label>
+                        <input id="No" type="radio" name="Answer" required value="No">
+                    </div>
+                    <button id="btn" type="submit">register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="block"></div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
