@@ -6,7 +6,7 @@ loading.setAttribute('alt', 'laoding')
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         loadingWrapper.remove()
-    }, 1500)
+    }, 1800)
 });
 
 //  Modal:
@@ -15,10 +15,48 @@ const modal = document.querySelector('.modal')
 
 ModalBtn && ModalBtn.addEventListener('click', function() {
     modal.style.display = 'none'
-    setTimeout(() => {
-        document.querySelector('#tastiqlandi').remove()
-    }, 3000);
 })
+
+// Not bot chaking:
+document.querySelectorAll('.image-container').forEach(container => {
+    container.addEventListener('click', () => {
+        const checkbox = container.querySelector('.image-checkbox');
+        checkbox.checked = !checkbox.checked;
+        container.classList.toggle('checked', checkbox.checked);
+    });
+});
+
+document.getElementById('doneBtn').addEventListener('click', () => {
+    resetCheckboxes();
+    const allTrueChaked = document.querySelectorAll('input[type="checkbox"][id="trueChaked"]');
+    const checkedTrueChaked = Array.from(allTrueChaked).filter(checkbox => checkbox.checked);
+
+    const falseChaked = document.querySelectorAll('input[type="checkbox"][id="falseChaked"]:checked');
+    if (falseChaked.length > 0) {
+        alert("Please do not select the incorrect images.");
+    } else if (checkedTrueChaked.length === allTrueChaked.length) {
+        document.getElementById('imageCkekTotbot').style.display = 'none';
+        setTimeout(() => {
+            document.querySelector('#tastiqlandi').remove()
+        }, 3000);
+    } else {
+        alert("Please select the correct images.");
+    }
+
+});
+
+function resetCheckboxes() {
+    document.querySelectorAll('.falseChaked').forEach(checkbox => {
+        checkbox.checked = false;
+    });
+    document.querySelectorAll('.trueChaked').forEach(checkbox => {
+        checkbox.checked = false;
+    });
+}
+
+document.getElementById('doneBtn').disabled = false;
+
+
 
 // Register:
 const form = document.querySelector('.form')
