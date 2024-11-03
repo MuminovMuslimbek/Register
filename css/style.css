@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none;
     list-style: none;
     text-decoration: none;
 }
@@ -21,6 +20,11 @@ body {
     font-size: 14px;
     font-family: 'Courier New', Courier, monospace;
     padding: 60px 0;
+}
+
+::selection {
+    color: #0090d8;
+    background: #eef4f2;
 }
 
  ::-webkit-scrollbar {
